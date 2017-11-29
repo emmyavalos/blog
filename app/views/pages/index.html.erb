@@ -1,0 +1,8 @@
+<h1>Pages</h1>
+<p><%= link_to 'New Page', new_page_path %>
+<% @pages.each do |page| %>
+  <h2><%= page.title %></h2>
+  <%= link_to 'Show Page', page_path(page) %>
+  <%= link_to 'Edit Page', edit_page_path(page) %>
+  <%= link_to 'Destory Page', page, method: :delete %>
+<% end %>
